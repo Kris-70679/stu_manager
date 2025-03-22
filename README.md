@@ -4,7 +4,7 @@
 
 ### 主要功能
 
-- **添加学生信息**：可以添加新的学生信息（学号、用户名、密码、出生日期、性别、成绩等）。
+- **添加学生信息**：可以添加新的学生信息（学号、用户名、密码、出生日期、性别、成绩）。
 - **修改学生信息**：可以修改现有学生的信息。
 - **删除学生信息**：可以删除某个学生的记录。
 - **查询学生信息**：支持模糊查询，通过学号、用户名、性别等信息查询学生。
@@ -51,7 +51,7 @@ CREATE TABLE students (
     password VARCHAR(100),
     birth DATE,
     gender VARCHAR(10),
-    score FLOAT
+    score INT
 );
 ```
 
@@ -64,7 +64,7 @@ CREATE TABLE students (
 3. 在 `mainwindow.cpp` 中，确保数据库连接部分的配置正确。由于数据库部署在 Linux 服务器上，需要提供正确的 IP 地址或主机名：
 
    ```
-   cpp复制编辑db.setHostName("192.168.1.100");  // 替换为 Linux 服务器的 IP 地址
+   db.setHostName("192.168.1.100");  // 替换为 Linux 服务器的 IP 地址
    db.setDatabaseName("mydatabase");  // 替换为你的数据库名
    db.setUserName("test1");           // 替换为你的数据库用户名
    db.setPassword("12345678");        // 替换为你的数据库密码
