@@ -15,7 +15,7 @@
 - **开发框架**：Qt6
 - **数据库**：MySQL（部署在 Linux 服务器上）
 - **编程语言**：C++
-- **其他工具**：Qt Creator（IDE）
+- **IDE**：Qt Creator
 
 ## 安装与配置
 
@@ -28,24 +28,20 @@
 确保你已经在 Linux 上安装并配置好 MySQL 数据库。如果没有安装 MySQL，可以通过以下命令安装：
 
 ```
-bash复制编辑sudo apt-get update
+sudo apt-get update
 sudo apt-get install mysql-server
 ```
 
 安装完成后，启动 MySQL 服务并确保其正常运行：
 
 ```
-bash
-
-
-复制编辑
 sudo service mysql start
 ```
 
 在 MySQL 中创建数据库和表：
 
 ```
-sql复制编辑CREATE DATABASE mydatabase;
+CREATE DATABASE mydatabase;
 
 USE mydatabase;
 
@@ -106,7 +102,7 @@ CREATE TABLE students (
 
 ## 常见问题
 
-### 1. 数据库连接失败
+### 数据库连接失败
 
 - 确保提供的 **数据库主机 IP 地址** 和 **端口** 正确。
 - 在 Linux 上，确保 **MySQL 服务器** 正在运行，且防火墙或网络设置没有阻止连接。
